@@ -18,6 +18,7 @@
 - [UIScrollView](Snippets/UIScrollView.md)
 - [UITabController](Snippets/UITabController.md)
 - [UITableViewController](Snippets/UITableViewController.md)
+- [UIViewController](Snippets/UIViewController.md)
 - [Variables](Snippets/Variables.md)
 - [Xcode Editor](Snippets/Xcode Editor.md)
 
