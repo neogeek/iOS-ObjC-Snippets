@@ -13,23 +13,21 @@ sumNumbers(30, 70);
 ###Enumerating With a Block
 
 ```objc
-NSArray *hats = @[@"Cowboy", @"Conductor", @"Baseball", @"Beanie", @"Beret", @"Fez"];
+NSArray *hats = @[@"cowboy hat", @"conductor cap", @"baseball hat", @"beanie", @"beret", @"fez"];
 
 [hats enumerateObjectsUsingBlock:^(NSString *hat, NSUInteger index, BOOL *stop) {
-        NSLog(@"Trying on a %@ hat.", hat);
-    }
+    NSLog(@"Trying on a %@.", hat);
+}
  ];
 ```
 
 ###Using Varaibles From Outside a Block
 
 ```objc
-__block NSString *greeting = @"How cool!";
-
-NSArray *hats = @[@"Cowboy", @"Conductor", @"Baseball", @"Beanie", @"Beret", @"Fez"];
+NSArray *hats = @[@"cowboy hat", @"conductor cap", @"baseball hat", @"beanie", @"beret", @"fez"];
 
 [hats enumerateObjectsUsingBlock:^(NSString *hat, NSUInteger index, BOOL *stop) {
-        NSLog(@"Trying on a %@ hat. %@", hat, greeting);
-    }
+    NSLog(@"Trying on a %@. %@", hat, greeting);
+}
  ];
 ```
