@@ -13,6 +13,7 @@
 - [Miscellaneous Methods](Snippets/Miscellaneous Methods.md)
 - [Social](Snippets/Social.md)
 - [UI](Snippets/UI.md)
+- [UIActionSheet](Snippets/UIActionSheet.md)
 - [UINavigationController](Snippets/UINavigationController.md)
 - [UIScrollView](Snippets/UIScrollView.md)
 - [UITabController](Snippets/UITabController.md)
