@@ -2,6 +2,10 @@
 
 > A collection of useful snippet for iOS development.
 
+##Intro
+
+This is a collection of snippets that I have been referencing quite a bit while learning iOS development (started in September 2013). Please keep in mind that while these snippets all work (all have been tested in Xcode 5) they might not be the most optimized way of accomplishing something). And while they have been tested, they have not been stressed tested for memory leaks.
+
 ##Table of Contents
 
 - [AutoLayout](Snippets/AutoLayout.md)
@@ -22,7 +26,7 @@
 - [Variables](Snippets/Variables.md)
 - [Xcode Editor](Snippets/Xcode Editor.md)
 
-##Other Links
+##Links
 
 ###Blogs
 
