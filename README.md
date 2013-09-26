@@ -24,13 +24,16 @@
 
 ##Other Links
 
+###Blogs
+
+- <http://teehanlax.com/blog/>
+- <http://nshipster.com/>
+
 ###Reference
 
 - <https://developer.apple.com/library/ios/navigation/>
 - <https://developer.apple.com/wwdc/videos/>
 - <http://asciiwwdc.com/>
-- <http://nshipster.com/>
-- <http://www.teehanlax.com/blog/>
 
 ###Graphic Resources
 
@@ -40,10 +43,9 @@
 ###Tools
 
 - <https://testflightapp.com/>
-- <http://www.paintcodeapp.com/>
+- <http://paintcodeapp.com/>
 
-###Plugins
+###Frameworks
 
-- <http://getsharekit.com/install/>
-- <https://github.com/AFNetworking/AFNetworking>
-- <http://restkit.org/>
+- <https://github.com/AFNetworking/AFNetworking/>
+- <https://github.com/RestKit/RestKit/>
