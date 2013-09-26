@@ -1,6 +1,6 @@
 #AutoLayout
 
-###Basic Implementation
+###Basic Setup (Two Buttons Anchored to the Bottom)
 
 ```objc
 - (void)viewDidLoad
@@ -25,7 +25,7 @@
 
     [self.view addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"|-[button1(button2)]-[button2]-|"
                                                                       options:NSLayoutFormatAlignAllTop | NSLayoutFormatAlignAllBottom
-                                                                      metrics:metrics
+                                                                      metrics:nil
                                                                         views:views]];
 
     [self.view addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"V:[button1(height)]-|"
@@ -36,18 +36,23 @@
 }
 ```
 
-###Using Custom Function _setConstraintsForViews_
+###Using Custom Function _setConstraintsForViews_ (Two Buttons Anchored to the Bottom)
 
 ```objc
 - (void)viewDidLoad
 {
 
-    UIButton *button = [[UIButton alloc] init];
-    [button setTitle:@"Button 1" forState:UIControlStateNormal];
-    [button setBackgroundColor:[UIColor darkGrayColor]];
-    [button setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
+    UIButton *button1 = [[UIButton alloc] init];
+    [button1 setTitle:@"Button 1" forState:UIControlStateNormal];
+    [button1 setBackgroundColor:[UIColor darkGrayColor]];
+    [button1 setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
 
-    [self setConstraintsForViews:NSDictionaryOfVariableBindings(button) visualFormats:@[@"|-[button]-|", @"V:[button(height)]-|"] metrics:@{@"height":@50.0} options:0];
+    UIButton *button2 = [[UIButton alloc] init];
+    [button2 setTitle:@"Button 2" forState:UIControlStateNormal];
+    [button2 setBackgroundColor:[UIColor darkGrayColor]];
+    [button2 setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
+
+    [self setConstraintsForViews:NSDictionaryOfVariableBindings(button1, button2) visualFormats:@[@"|-[button1(button2)]-[button2]-|", @"V:[button1(height)]-|"] metrics:@{@"height":@50.0} options:NSLayoutFormatAlignAllTop | NSLayoutFormatAlignAllBottom];
 
 }
 
