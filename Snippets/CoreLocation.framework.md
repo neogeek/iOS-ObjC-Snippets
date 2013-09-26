@@ -1,4 +1,4 @@
-#CoreLocation
+#CoreLocation.framework
 
 ###Getting Latitude/Longitude
 

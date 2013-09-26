@@ -1,4 +1,4 @@
-#Social
+#Social.framework
 
 ###Twitter/Facebook Post Buttons
 
