@@ -4,21 +4,21 @@
 
 ##Table of Contents
 
-- [AutoLayout](AutoLayout.md)
-- [Blocks](Blocks.md)
-- [CoreData](CoreData.md)
-- [Handling Data](Handling Data.md)
-- [Handling Objects](Handling Objects.md)
-- [Logic](Logic.md)
-- [Miscellaneous Methods](Miscellaneous Methods.md)
-- [Social](Social.md)
-- [UI](UI.md)
-- [UINavigationController](UINavigationController.md)
-- [UIScrollView](UIScrollView.md)
-- [UITabController](UITabController.md)
-- [UITableViewController](UITableViewController.md)
-- [Varaiables](Varaiables.md)
-- [Xcode Editor](Xcode Editor.md)
+- [AutoLayout](Snippets/AutoLayout.md)
+- [Blocks](Snippets/Blocks.md)
+- [CoreData](Snippets/CoreData.md)
+- [Handling Data](Snippets/Handling Data.md)
+- [Handling Objects](Snippets/Handling Objects.md)
+- [Logic](Snippets/Logic.md)
+- [Miscellaneous Methods](Snippets/Miscellaneous Methods.md)
+- [Social](Snippets/Social.md)
+- [UI](Snippets/UI.md)
+- [UINavigationController](Snippets/UINavigationController.md)
+- [UIScrollView](Snippets/UIScrollView.md)
+- [UITabController](Snippets/UITabController.md)
+- [UITableViewController](Snippets/UITableViewController.md)
+- [Variables](Snippets/Variables.md)
+- [Xcode Editor](Snippets/Xcode Editor.md)
 
 ##Other Links
 
