@@ -1,8 +1,12 @@
 #AutoLayout
 
-###Basic Setup (Two Buttons Anchored to the Bottom)
+###Basic Setup
+
+**Two Buttons Anchored to the Bottom**
 
 ```objc
+#ViewController.m
+
 - (void)viewDidLoad
 {
 
@@ -36,9 +40,13 @@
 }
 ```
 
-###Using Custom Function _setConstraintsForViews_ (Two Buttons Anchored to the Bottom)
+###Using Custom Function _setConstraintsForViews_
+
+**Two Buttons Anchored to the Bottom**
 
 ```objc
+#ViewController.m
+
 - (void)viewDidLoad
 {
 
@@ -101,7 +109,11 @@
 
 ###More Advanced Example of using _setConstraintsForViews_
 
+**Layout with header, main content area, and footer.**
+
 ```objc
+#ViewController.m
+
 - (void)viewDidLoad
 {
 
