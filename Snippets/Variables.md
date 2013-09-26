@@ -1,12 +1,12 @@
 #Variables
 
-##Constants
+###Constants
 
 ```objc
 #define WEATHER_API_URL @"http://warm-wildwood-5296.herokuapp.com/"
 ```
 
-##String
+###String
 
 ```objc
 NSString *firstName = @"Scott";
@@ -15,56 +15,56 @@ NSString *fullname = [NSString stringWithFormat:@"%@ %@", firstName, lastName];
 NSLog(@"%@", fullname);
 ```
 
-##Number
+###Number
 
 ```objc
 NSNumber *age = @29;
 NSLog(@"%@", age);
 ```
 
-##Unsigned Integer
+###Unsigned Integer
 
 ```objc
 NSUInteger age = [@29 unsignedIntegerValue];
 NSLog(@"%lu", (unsigned long)age);
 ```
 
-##Array
+###Array
 
 ```objc
 NSArray *apps = @[@"Pages", @"Numbers", @"Keynote"];
 NSLog(@"%@", apps);
 ```
 
-##Dictionary
+###Dictionary
 
 ```objc
 NSDictionary *user = @{@"First Name": @"Scott", @"Last Name": @"Doxey"};
 NSLog(@"%@", user);
 ```
 
-##Log Object Type
+###Log Object Type
 
 ```objc
 NSDictionary *user = @{@"First Name": @"Scott", @"Last Name": @"Doxey"};
-NSLog(@"%@",[user class]);
+NSLog(@"%@", [user class]);
 ```
 
-#Log NSDictionary Keys
+###Log NSDictionary Keys
 
 ```objc
 NSDictionary *user = @{@"First Name": @"Scott", @"Last Name": @"Doxey"};
-NSLog(@"%@",[user allKeys]);
+NSLog(@"%@", [user allKeys]);
 ```
 
-##Log NSDictionary Values
+###Log NSDictionary Values
 
 ```objc
 NSDictionary *user = @{@"First Name": @"Scott", @"Last Name": @"Doxey"};
-NSLog(@"%@",[user allValues]);
+NSLog(@"%@", [user allValues]);
 ```
 
-##URL
+###URL
 
 _ViewController.m_
 
@@ -125,7 +125,7 @@ _ViewController.m_
 @end
 ```
 
-##ENUM
+###ENUM
 
 ```objc
 typedef NS_ENUM(NSInteger, DayOfWeek) {
@@ -137,10 +137,11 @@ typedef NS_ENUM(NSInteger, DayOfWeek) {
     DayOfWeekSaturday = 6,
     DayOfWeekSunday = 7
 };
+
 NSLog(@"%ld", (long)DayOfWeekMonday);
 ```
 
-##Empty Variables
+###Empty Variables
 
 ```objc
 NSString *emptyString = [NSString string];
@@ -148,7 +149,7 @@ NSArray *emptyArray = [NSArray array];
 NSDictionary *emptyDict = [NSDictionary dictionary];
 ```
 
-##Copying Variables
+###Copying Variables
 
 ```objc
 NSString *firstName = @"Scott";

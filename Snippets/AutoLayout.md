@@ -1,6 +1,6 @@
 #AutoLayout
 
-##Basic Implementation
+###Basic Implementation
 
 ```objc
 - (void)viewDidLoad
@@ -36,7 +36,7 @@
 }
 ```
 
-##Using Custom Function _setConstraintsForViews_
+###Using Custom Function _setConstraintsForViews_
 
 ```objc
 - (void)viewDidLoad
@@ -94,7 +94,7 @@
 }
 ```
 
-##More Advanced Example of using _setConstraintsForViews_
+###More Advanced Example of using _setConstraintsForViews_
 
 ```objc
 - (void)viewDidLoad

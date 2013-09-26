@@ -1,12 +1,12 @@
 #Xcode Editor
 
-##Throw Compile Warning
+###Throw Compile Warning
 
 ```objc
 #warning Potentially incomplete method implementation.
 ```
 
-##Throw Compile Error
+###Throw Compile Error
 
 ```objc
 #error This code is broken.

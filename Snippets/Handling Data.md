@@ -1,6 +1,6 @@
 #Handling Data
 
-##Convert JSON into Dictionary Object
+###Convert JSON into Dictionary Object
 
 ```objc
 NSData *data = [@"{\"status\": \"OK\"}" dataUsingEncoding:NSUTF8StringEncoding];
@@ -12,14 +12,14 @@ NSLog(@"Status: %@", [dataDictionary objectForKey:@"status"]);
 NSLog(@"Status: %@", dataDictionary[@"status"]);
 ```
 
-##Format Number
+###Format Number
 
 ```objc
 NSString *temp = [NSString stringWithFormat:@"%.1f", [@"89.98" floatValue]];
 NSLog(@"%@", temp);
 ```
 
-##Comparing Strings
+###Comparing Strings
 
 ```objc
 if ([@"Hello World!" isEqualToString:@"Hello World!"]) {

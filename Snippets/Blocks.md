@@ -1,6 +1,6 @@
 #Blocks
 
-##Basic Block
+###Basic Block
 
 ```objc
 void (^sumNumbers)(NSUInteger, NSUInteger) = ^(NSUInteger num1, NSUInteger num2) {
@@ -10,7 +10,7 @@ void (^sumNumbers)(NSUInteger, NSUInteger) = ^(NSUInteger num1, NSUInteger num2)
 sumNumbers(30, 70);
 ```
 
-##Enumerating With a Block
+###Enumerating With a Block
 
 ```objc
 NSArray *hats = @[@"Cowboy", @"Conductor", @"Baseball", @"Beanie", @"Beret", @"Fez"];
@@ -21,7 +21,7 @@ NSArray *hats = @[@"Cowboy", @"Conductor", @"Baseball", @"Beanie", @"Beret", @"F
  ];
 ```
 
-##Using Varaibles From Outside a Block
+###Using Varaibles From Outside a Block
 
 ```objc
 __block NSString *greeting = @"How cool!";

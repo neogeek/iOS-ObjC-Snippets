@@ -1,7 +1,5 @@
 #UITableViewController
 
-##Basic Setup
-
 _AppDelagate.m_
 
 ```objc

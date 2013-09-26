@@ -1,6 +1,6 @@
 #CoreLocation
 
-##Getting Latitude/Longitude
+###Getting Latitude/Longitude
 
 ```objc
 #import "ViewController.h"
@@ -37,7 +37,7 @@
 @end
 ```
 
-##Getting City, State, Zip, Country
+###Getting City, State, Zip, Country
 
 ```objc
 #import "ViewController.h"
@@ -80,7 +80,7 @@
 @end
 ```
 
-##Getting Address
+###Getting Address
 
 ```objc
 #import "ViewController.h"

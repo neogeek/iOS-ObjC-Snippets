@@ -1,13 +1,14 @@
 #Miscellaneous Methods
 
-##Network Activity Indicator
+###Network Activity Indicator
 
 ```objc
 [UIApplication sharedApplication].networkActivityIndicatorVisible = YES;
 [UIApplication sharedApplication].networkActivityIndicatorVisible = NO;
 ```
 
-##Getting Origin and Size of Status Bar
+###Getting Origin and Size of Status Bar
+
 ```objc
 CGPoint statuBarOrigin = [UIApplication sharedApplication].statusBarFrame.origin;
 NSLog(@"X: %f Y: %f", statuBarOrigin.x, statuBarOrigin.y);
@@ -16,13 +17,13 @@ CGSize statuBarSize = [UIApplication sharedApplication].statusBarFrame.size;
 NSLog(@"Width: %f Height: %f", statuBarSize.width, statuBarSize.height);
 ```
 
-##Setting Background (RGBA) Color
+###Setting Background (RGBA) Color
 
 ```objc
 [self.view setBackgroundColor:[UIColor colorWithRed:255 green:0 blue:0 alpha:1]];
 ```
 
-##Show Alert
+###Show Alert
 
 ```objc
 UIAlertView *message = [[UIAlertView alloc] initWithTitle:@"Alert"
@@ -33,7 +34,7 @@ UIAlertView *message = [[UIAlertView alloc] initWithTitle:@"Alert"
 [message show];
 ```
 
-##Setting a Timer
+###Setting a Timer
 
 ```objc
 @interface ViewController ()
@@ -82,7 +83,7 @@ UIAlertView *message = [[UIAlertView alloc] initWithTitle:@"Alert"
 @end
 ```
 
-##Animations
+###Animations
 
 ```objc
 - (void)viewDidLoad;
@@ -109,7 +110,7 @@ UIAlertView *message = [[UIAlertView alloc] initWithTitle:@"Alert"
 }
 ```
 
-##Remove SubViews From View
+###Remove SubViews From View
 
 ```objc
 - (void)viewDidLoad;
@@ -135,7 +136,7 @@ UIAlertView *message = [[UIAlertView alloc] initWithTitle:@"Alert"
 }
 ```
 
-##UITapGestureRecognizer
+###UITapGestureRecognizer
 
 ```objc
 - (void)viewDidLoad;
@@ -158,7 +159,7 @@ UIAlertView *message = [[UIAlertView alloc] initWithTitle:@"Alert"
 }
 ```
 
-##Throw Exception
+###Throw Exception
 
 ```objc
 [NSException raise:@"Invalid foo value" format:@"foo of %d is invalid", 2];

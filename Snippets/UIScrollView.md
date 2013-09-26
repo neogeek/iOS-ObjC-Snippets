@@ -1,7 +1,5 @@
 #UIScrollView
 
-##Basic Setup
-
 _ViewController.m_
 
 ```objc
@@ -32,7 +30,7 @@ _ViewController.m_
 }
 ```
 
-##UIScrollView w/ Pages and Pagination
+###UIScrollView w/ Pages and Pagination
 
 _ViewController.h_
 

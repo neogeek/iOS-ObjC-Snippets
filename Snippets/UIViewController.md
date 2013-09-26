@@ -1,6 +1,6 @@
 #UIViewController
 
-##UIViewController as a Modal View
+###UIViewController as a Modal View
 
 _ViewController.m_
 
@@ -46,7 +46,7 @@ _ViewController.m_
 }
 ```
 
-##UIViewController as a Modal View w/ Custom Animation
+###UIViewController as a Modal View w/ Custom Animation
 
 _ViewController.m_
 

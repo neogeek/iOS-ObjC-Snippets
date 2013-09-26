@@ -1,6 +1,33 @@
 #Logic
 
-##Case Statement
+###If Statements
+
+```objc
+NSNumber *scale = @8;
+
+if ([scale intValue] < 10) {
+    NSLog(@"Less than 10");
+}
+```
+
+```objc
+NSString *hat = @"Fez";
+
+if ([hat isEqualToString:@"Fedora"]) {
+    NSLog(@"Hat is a Fedora.");
+} else {
+    NSLog(@"Hat is not a Fedora.");
+}
+
+```
+NSString *hat = @"Fez";
+
+if ([hat length]) {
+    NSLog(@"You are wearing a hat.");
+}
+```
+
+###Case Statement
 
 **Note** Case statements only work with integers, not strings.
 
@@ -40,31 +67,5 @@ switch (day) {
         NSLog(@"Saturday");
         break;
     }
-}
-```
-
-##Integer Comparison
-
-```objc
-NSNumber *scale = @8;
-
-if ([scale intValue] < 10) {
-    NSLog(@"Less than 10");
-}
-```
-
-##String Comparison
-
-```objc
-NSString *hat = @"Fez";
-
-if ([hat isEqualToString:@"Fedora"]) {
-    NSLog(@"Hat is a Fedora.");
-} else {
-    NSLog(@"Hat is not a Fedora.");
-}
-
-if ([hat length]) {
-    NSLog(@"You are wearing a hat.");
 }
 ```

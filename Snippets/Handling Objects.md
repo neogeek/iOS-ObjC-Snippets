@@ -1,6 +1,6 @@
 #Handling Objects
 
-##Comparing Objects
+###Comparing Objects
 
 ```objc
 @interface ViewController ()

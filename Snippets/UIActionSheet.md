@@ -1,6 +1,18 @@
 #UIActionSheet
 
+_ViewController.h_
+
 ```objc
+@interface ViewController : UIViewController <UIActionSheetDelegate>
+
+@end
+```
+
+_ViewController.m_
+
+```objc
+@implementation ViewController
+
 - (void)viewDidLoad;
 {
 
@@ -51,4 +63,6 @@
     }
 
 }
+
+@end
 ```
