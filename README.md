@@ -4,7 +4,7 @@
 
 ##Intro
 
-This is a collection of snippets that I have been referencing quite a bit while learning iOS development (started in September 2013). Please keep in mind that while these snippets all work (all have been tested in Xcode 5) they might not be the most optimized way of accomplishing something). And while they have been tested, they have not been stressed tested for memory leaks.
+This is a collection of snippets that I have been referencing quite a bit while learning iOS development (started in September 2013). Please keep in mind that while these snippets all work (all have been tested in **Xcode 5**) they might not be the most optimized way of accomplishing something). And while they have been tested, they have not been stressed tested for memory leaks.
 
 ##Table of Contents
 
@@ -16,6 +16,7 @@ This is a collection of snippets that I have been referencing quite a bit while 
 - [Handling Objects](Snippets/Handling Objects.md)
 - [Logic](Snippets/Logic.md)
 - [Miscellaneous Methods](Snippets/Miscellaneous Methods.md)
+- [NSCoding](Snippets/NSCoding.md)
 - [Social.framework](Snippets/Social.framework.md)
 - [UIActionSheet](Snippets/UIActionSheet.md)
 - [UIButton](Snippets/UIButton.md)
