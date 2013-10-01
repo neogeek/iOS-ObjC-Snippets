@@ -40,7 +40,7 @@
 }
 ```
 
-###Using Custom Function [_setConstraintsForViews_](/Libraries/ConstraintsForViews)
+###Using Custom Function [_setConstraintsForViews_](../Libraries/ConstraintsForViews)
 
 **Two Buttons Anchored to the Bottom**
 
@@ -65,7 +65,7 @@
 }
 ```
 
-###More Advanced Example of using [_setConstraintsForViews_](/Libraries/ConstraintsForViews)
+###More Advanced Example of using [_setConstraintsForViews_](../Libraries/ConstraintsForViews)
 
 **Layout with header, main content area, and footer.**
 
