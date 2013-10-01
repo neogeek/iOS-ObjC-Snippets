@@ -8,7 +8,7 @@ First drag the **ContraintsViewController** folder into your project. Be sure to
 
 ![screenshot](http://f.cl.ly/items/243F3M193I162o3e1Q3u/Screen%20Shot%202013-10-01%20at%2011.53.23%20AM.png)
 
-Then import the header file into the view controller you would like to use the `setConstraintsForViews` method with. Then change `UIViewController` to `ContraintsViewController`.
+Import into the header file of the view controller you will be working in, then change object `UIViewController` to `ContraintsViewController`.
 
 ```objc
 #import <UIKit/UIKit.h>
@@ -25,20 +25,41 @@ Now you can use AutoLayout like this ...
 - (void)viewDidLoad
 {
 
-    UIButton *button1 = [[UIButton alloc] init];
-    [button1 setTitle:@"Button 1" forState:UIControlStateNormal];
-    [button1 setBackgroundColor:[UIColor darkGrayColor]];
-    [button1 setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
+    UIButton *headerButton = [[UIButton alloc] init];
+    [headerButton setTitle:@"Header 1" forState:UIControlStateNormal];
+    [headerButton setBackgroundColor:[UIColor darkGrayColor]];
+    [headerButton setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
 
-    UIButton *button2 = [[UIButton alloc] init];
-    [button2 setTitle:@"Button 2" forState:UIControlStateNormal];
-    [button2 setBackgroundColor:[UIColor darkGrayColor]];
-    [button2 setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
+    UIButton *contentButton = [[UIButton alloc] init];
+    [contentButton setTitle:@"Content 1" forState:UIControlStateNormal];
+    [contentButton setBackgroundColor:[UIColor darkGrayColor]];
+    [contentButton setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
 
-    [self setConstraintsForViews:NSDictionaryOfVariableBindings(button1, button2)
-                   visualFormats:@[@"|-[button1(button2)]-[button2]-|", @"V:[button1(height)]-|"]
-                         metrics:@{@"height":@50.0}
-                         options:NSLayoutFormatAlignAllTop | NSLayoutFormatAlignAllBottom];
+    UIButton *bottomButton1 = [[UIButton alloc] init];
+    [bottomButton1 setTitle:@"Bottom 1" forState:UIControlStateNormal];
+    [bottomButton1 setBackgroundColor:[UIColor darkGrayColor]];
+    [bottomButton1 setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
+
+    UIButton *bottomButton2 = [[UIButton alloc] init];
+    [bottomButton2 setTitle:@"Bottom 2" forState:UIControlStateNormal];
+    [bottomButton2 setBackgroundColor:[UIColor darkGrayColor]];
+    [bottomButton2 setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
+
+    [self setConstraintsForViews:NSDictionaryOfVariableBindings(headerButton, contentButton, bottomButton1, bottomButton2)
+                   visualFormats:@[
+                                   @"|-(innerSpacing)-[headerButton]-(innerSpacing)-|",
+                                   @"|-(innerSpacing)-[contentButton]-(innerSpacing)-|",
+                                   @"|-(innerSpacing)-[bottomButton1(bottomButton2)]-[bottomButton2]-(innerSpacing)-|"
+                                   ]
+                         metrics:@{@"headerHeight":@75.0, @"bottomButtonHeight":@40.0, @"innerSpacing":@10.0}
+                         options:NSLayoutFormatAlignAllTop | NSLayoutFormatAlignAllBottom
+     ];
+
+    [self setConstraintsForViews:NSDictionaryOfVariableBindings(headerButton, contentButton, bottomButton1, bottomButton2)
+                   visualFormats:@[@"V:|-[headerButton(headerHeight)]-[contentButton]-[bottomButton1(bottomButtonHeight)]-(innerSpacing)-|"]
+                         metrics:@{@"headerHeight":@75.0, @"bottomButtonHeight":@40.0, @"innerSpacing":@10.0}
+                         options:0
+     ];
 
 }
 ```
@@ -49,31 +70,57 @@ Now you can use AutoLayout like this ...
 - (void)viewDidLoad
 {
 
-    UIButton *button1 = [[UIButton alloc] init];
-    [button1 setTitle:@"Button 1" forState:UIControlStateNormal];
-    [button1 setBackgroundColor:[UIColor darkGrayColor]];
-    [button1 setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
+    UIButton *headerButton = [[UIButton alloc] init];
+    [headerButton setTitle:@"Header 1" forState:UIControlStateNormal];
+    [headerButton setBackgroundColor:[UIColor darkGrayColor]];
+    [headerButton setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
 
-    [button1 setTranslatesAutoresizingMaskIntoConstraints:NO];
-    [self.view addSubview:button1];
+    [headerButton setTranslatesAutoresizingMaskIntoConstraints:NO];
+    [self.view addSubview:headerButton];
 
-    UIButton *button2 = [[UIButton alloc] init];
-    [button2 setTitle:@"Button 2" forState:UIControlStateNormal];
-    [button2 setBackgroundColor:[UIColor darkGrayColor]];
-    [button2 setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
+    UIButton *contentButton = [[UIButton alloc] init];
+    [contentButton setTitle:@"Content 1" forState:UIControlStateNormal];
+    [contentButton setBackgroundColor:[UIColor darkGrayColor]];
+    [contentButton setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
 
-    [button2 setTranslatesAutoresizingMaskIntoConstraints:NO];
-    [self.view addSubview:button2];
+    [contentButton setTranslatesAutoresizingMaskIntoConstraints:NO];
+    [self.view addSubview:contentButton];
 
-    NSDictionary *metrics = @{@"height":@50.0};
-    NSDictionary *views = NSDictionaryOfVariableBindings(button1, button2);
+    UIButton *bottomButton1 = [[UIButton alloc] init];
+    [bottomButton1 setTitle:@"Bottom 1" forState:UIControlStateNormal];
+    [bottomButton1 setBackgroundColor:[UIColor darkGrayColor]];
+    [bottomButton1 setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
 
-    [self.view addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"|-[button1(button2)]-[button2]-|"
+    [bottomButton1 setTranslatesAutoresizingMaskIntoConstraints:NO];
+    [self.view addSubview:bottomButton1];
+
+    UIButton *bottomButton2 = [[UIButton alloc] init];
+    [bottomButton2 setTitle:@"Bottom 2" forState:UIControlStateNormal];
+    [bottomButton2 setBackgroundColor:[UIColor darkGrayColor]];
+    [bottomButton2 setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
+
+    [bottomButton2 setTranslatesAutoresizingMaskIntoConstraints:NO];
+    [self.view addSubview:bottomButton2];
+
+    NSDictionary *metrics = @{@"headerHeight":@75.0, @"bottomButtonHeight":@40.0, @"innerSpacing":@10.0};
+    NSDictionary *views = NSDictionaryOfVariableBindings(headerButton, contentButton, bottomButton1, bottomButton2);
+
+    [self.view addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"|-(innerSpacing)-[headerButton]-(innerSpacing)-|"
                                                                       options:NSLayoutFormatAlignAllTop | NSLayoutFormatAlignAllBottom
-                                                                      metrics:nil
+                                                                      metrics:metrics
                                                                         views:views]];
 
-    [self.view addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"V:[button1(height)]-|"
+    [self.view addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"|-(innerSpacing)-[contentButton]-(innerSpacing)-|"
+                                                                      options:NSLayoutFormatAlignAllTop | NSLayoutFormatAlignAllBottom
+                                                                      metrics:metrics
+                                                                        views:views]];
+
+    [self.view addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"|-(innerSpacing)-[bottomButton1(bottomButton2)]-[bottomButton2]-(innerSpacing)-|"
+                                                                      options:NSLayoutFormatAlignAllTop | NSLayoutFormatAlignAllBottom
+                                                                      metrics:metrics
+                                                                        views:views]];
+
+    [self.view addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"V:|-[headerButton(headerHeight)]-[contentButton]-[bottomButton1(bottomButtonHeight)]-(innerSpacing)-|"
                                                                       options:0
                                                                       metrics:metrics
                                                                         views:views]];
