@@ -53,6 +53,7 @@ Now you can use AutoLayout like this ...
     [button1 setTitle:@"Button 1" forState:UIControlStateNormal];
     [button1 setBackgroundColor:[UIColor darkGrayColor]];
     [button1 setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
+
     [button1 setTranslatesAutoresizingMaskIntoConstraints:NO];
     [self.view addSubview:button1];
 
@@ -60,8 +61,12 @@ Now you can use AutoLayout like this ...
     [button2 setTitle:@"Button 2" forState:UIControlStateNormal];
     [button2 setBackgroundColor:[UIColor darkGrayColor]];
     [button2 setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
+
     [button2 setTranslatesAutoresizingMaskIntoConstraints:NO];
     [self.view addSubview:button2];
+
+    NSDictionary *metrics = @{@"height":@50.0};
+    NSDictionary *views = NSDictionaryOfVariableBindings(button1, button2);
 
     [self.view addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"|-[button1(button2)]-[button2]-|"
                                                                       options:NSLayoutFormatAlignAllTop | NSLayoutFormatAlignAllBottom
