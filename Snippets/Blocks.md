@@ -24,6 +24,8 @@ NSArray *hats = @[@"cowboy hat", @"conductor cap", @"baseball hat", @"beanie", @
 ###Using Varaibles From Outside a Block
 
 ```objc
+__block NSString *greeting = @"Nice hat!"; // Properly scoped variable for use within a block.
+
 NSArray *hats = @[@"cowboy hat", @"conductor cap", @"baseball hat", @"beanie", @"beret", @"fez"];
 
 [hats enumerateObjectsUsingBlock:^(NSString *hat, NSUInteger index, BOOL *stop) {
