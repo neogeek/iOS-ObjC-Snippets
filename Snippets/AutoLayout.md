@@ -5,7 +5,7 @@
 **Two Buttons Anchored to the Bottom**
 
 ```objc
-#ViewController.m
+// ViewController.m
 
 - (void)viewDidLoad
 {
@@ -45,7 +45,7 @@
 **Two Buttons Anchored to the Bottom**
 
 ```objc
-#ViewController.m
+// ViewController.m
 
 - (void)viewDidLoad
 {
@@ -70,7 +70,7 @@
 **Layout with header, main content area, and footer.**
 
 ```objc
-#ViewController.m
+// ViewController.m
 
 - (void)viewDidLoad
 {
