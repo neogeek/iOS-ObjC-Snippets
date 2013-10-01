@@ -3,7 +3,18 @@
 ###Getting Latitude/Longitude
 
 ```objc
-#ViewController.m
+// ViewController.h
+
+#import <UIKit/UIKit.h>
+#import <CoreLocation/CoreLocation.h>
+
+@interface ViewController : UIViewController <CLLocationManagerDelegate>
+
+@end
+```
+
+```objc
+// ViewController.m
 
 #import "ViewController.h"
 #import <CoreLocation/CoreLocation.h>
@@ -42,7 +53,18 @@
 ###Getting City, State, Zip, Country
 
 ```objc
-#ViewController.m
+// ViewController.h
+
+#import <UIKit/UIKit.h>
+#import <CoreLocation/CoreLocation.h>
+
+@interface ViewController : UIViewController <CLLocationManagerDelegate>
+
+@end
+```
+
+```objc
+// ViewController.m
 
 #import "ViewController.h"
 #import <CoreLocation/CoreLocation.h>
@@ -87,7 +109,18 @@
 ###Getting Address
 
 ```objc
-#ViewController.m
+// ViewController.h
+
+#import <UIKit/UIKit.h>
+#import <CoreLocation/CoreLocation.h>
+
+@interface ViewController : UIViewController <CLLocationManagerDelegate>
+
+@end
+```
+
+```objc
+// ViewController.m
 
 #import "ViewController.h"
 #import <CoreLocation/CoreLocation.h>
