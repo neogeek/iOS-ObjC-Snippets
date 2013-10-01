@@ -40,7 +40,7 @@
 }
 ```
 
-###Using Custom Function [_setConstraintsForViews_](/neogeek/iOS-Snippets/blob/master/Libraries/ContraintsViewController/)
+###Using Custom Function [_setConstraintsForViews_](Libraries/ContraintsViewController/)
 
 **Two Buttons Anchored to the Bottom**
 
@@ -65,7 +65,7 @@
 }
 ```
 
-###More Advanced Example of using [_setConstraintsForViews_](/neogeek/iOS-Snippets/blob/master/Libraries/ContraintsViewController/)
+###More Advanced Example of using [_setConstraintsForViews_](Libraries/ContraintsViewController/)
 
 **Layout with header, main content area, and footer.**
 
