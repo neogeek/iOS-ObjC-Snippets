@@ -1,20 +1,20 @@
-#ContraintsViewController
+#ConstraintsViewController
 
-> A method for streamlining the creation of Auto Layout Contraints using VFL (Visual Format Language).
+> A method for streamlining the creation of Auto Layout Constraints using VFL (Visual Format Language).
 
 ##Usage
 
-First drag the **ContraintsViewController** folder into your project. Be sure to check off **Copy items into destination group's folder (if needed)** in the dialog that pops up.
+First drag the **ConstraintsViewController** folder into your project. Be sure to check off **Copy items into destination group's folder (if needed)** in the dialog that pops up.
 
 ![screenshot](http://f.cl.ly/items/243F3M193I162o3e1Q3u/Screen%20Shot%202013-10-01%20at%2011.53.23%20AM.png)
 
-Import into the header file of the view controller you will be working in, then change object `UIViewController` to `ContraintsViewController`.
+Import into the header file of the view controller you will be working in, then change object `UIViewController` to `ConstraintsViewController`.
 
 ```objc
 #import <UIKit/UIKit.h>
-#import "ContraintsViewController.h"
+#import "ConstraintsViewController.h"
 
-@interface ViewController : ContraintsViewController
+@interface ViewController : ConstraintsViewController
 
 @end
 ```

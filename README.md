@@ -34,7 +34,7 @@ This is a collection of snippets that I have been referencing quite a bit while 
 
 ##Libraries
 
-- [ContraintsViewController](Libraries/ContraintsViewController/)
+- [ConstraintsViewController](Libraries/ConstraintsViewController/)
 
 ##Links
 

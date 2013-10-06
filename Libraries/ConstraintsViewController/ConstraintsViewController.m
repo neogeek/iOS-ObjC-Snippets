@@ -1,18 +1,18 @@
 //
-//  ContraintsViewController.m
+//  ConstraintsViewController.m
 //  AutoLayout
 //
 //  Created by Scott Doxey on 10/1/13.
 //  Copyright (c) 2013 Scott Doxey. All rights reserved.
 //
 
-#import "ContraintsViewController.h"
+#import "ConstraintsViewController.h"
 
-@interface ContraintsViewController ()
+@interface ConstraintsViewController ()
 
 @end
 
-@implementation ContraintsViewController
+@implementation ConstraintsViewController
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -25,7 +25,7 @@
 }
 
 /**
- * Streamlines the creation of Auto Layout Contraints using VFL (Visual Format Language)
+ * Streamlines the creation of Auto Layout Constraints using VFL (Visual Format Language)
  *
  *  [self setConstraintsForViews:NSDictionaryOfVariableBindings(button) visualFormats:@[@"|-[button]-|", @"V:[button(height)]-|"] metrics:@{@"height":@50.0} options:0];
  *
@@ -39,31 +39,31 @@
 
 - (void)setConstraintsForViews:(NSDictionary *)views visualFormats:(NSArray *)visualFormats metrics:(NSDictionary *)metrics options:(NSLayoutFormatOptions)options;
 {
-    
+
     for (UIView *view in [views allValues]) {
-        
+
         if (![view isDescendantOfView:self.view]) {
-            
+
             [self.view addSubview:view];
-            
+
         }
-        
+
         [view setTranslatesAutoresizingMaskIntoConstraints:NO];
-        
+
     }
-    
+
     NSMutableDictionary *allMetrics = [[NSMutableDictionary alloc] initWithDictionary:metrics];
-    
+
     [allMetrics setValue:@(UILayoutPriorityDefaultHigh) forKey:@"_priorityHigh"];
     [allMetrics setValue:@(UILayoutPriorityDefaultLow) forKey:@"_priorityLow"];
     [allMetrics setValue:@(UILayoutPriorityRequired) forKey:@"_priorityRequired"];
-    
+
     for (NSString *format in visualFormats) {
-        
+
         [self.view addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:format options:options metrics:allMetrics views:views]];
-        
+
     }
-    
+
 }
 
 @end

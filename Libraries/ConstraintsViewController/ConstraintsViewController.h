@@ -1,5 +1,5 @@
 //
-//  ContraintsViewController.h
+//  ConstraintsViewController.h
 //  AutoLayout
 //
 //  Created by Scott Doxey on 10/1/13.
@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-@interface ContraintsViewController : UIViewController
+@interface ConstraintsViewController : UIViewController
 
 - (void)setConstraintsForViews:(NSDictionary *)views visualFormats:(NSArray *)visualFormats metrics:(NSDictionary *)metrics options:(NSLayoutFormatOptions)options;
 

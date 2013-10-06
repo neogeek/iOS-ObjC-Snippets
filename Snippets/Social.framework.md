@@ -76,7 +76,7 @@
 }
 
 /**
- * Streamlines the creation of Auto Layout Contraints using VFL (Visual Format Language)
+ * Streamlines the creation of Auto Layout Constraints using VFL (Visual Format Language)
  *
  *  [self setConstraintsForViews:NSDictionaryOfVariableBindings(button) visualFormats:@[@"|-[button]-|", @"V:[button(height)]-|"] metrics:@{@"height":@50.0} options:0];
  *
