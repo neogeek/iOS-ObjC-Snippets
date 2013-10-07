@@ -2,8 +2,29 @@
 
 ###Saving, Fetching and Removing Objects
 
+![xcode-screenshot](http://f.cl.ly/items/3K340R0h0b1q440Y2Z3O/CoreData-Model-xcode-screenshot.png)
+
+```objc
+// AppDelegate.m
+
+#import "AppDelegate.h"
+#import "ViewController.h"
+
+- (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
+{
+    self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
+    [self.window setRootViewController:[ViewController new]];
+    self.window.backgroundColor = [UIColor whiteColor];
+    [self.window makeKeyAndVisible];
+    return YES;
+}
+```
+
 ```objc
 // ViewController.m
+
+#import "ViewController.h"
+#import "AppDelegate.h"
 
 @interface ViewController ()
 {
