@@ -17,6 +17,7 @@ This is a collection of snippets that I have been referencing quite a bit while 
 - [Logic](Snippets/Logic.md)
 - [Miscellaneous Methods](Snippets/Miscellaneous Methods.md)
 - [NSCoding](Snippets/NSCoding.md)
+- [Settings](Snippets/Settings.md)
 - [Social.framework](Snippets/Social.framework.md)
 - [UIActionSheet](Snippets/UIActionSheet.md)
 - [UIButton](Snippets/UIButton.md)
