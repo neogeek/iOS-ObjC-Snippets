@@ -20,7 +20,7 @@ if ([hat isEqualToString:@"Fedora"]) {
 }
 ```
 
-```
+```objc
 NSString *hat = @"Fez";
 
 if ([hat length]) {
