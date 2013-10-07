@@ -18,6 +18,7 @@ if ([hat isEqualToString:@"Fedora"]) {
 } else {
     NSLog(@"Hat is not a Fedora.");
 }
+```
 
 ```
 NSString *hat = @"Fez";
