@@ -40,7 +40,7 @@
 }
 ```
 
-###Using Custom Function [_setConstraintsForViews_](../Libraries/ConstraintsViewController/)
+###Using Custom Function [_setConstraintsForViews_](../Libraries/ContraintsViewController/)
 
 **Two Buttons Anchored to the Bottom**
 
@@ -60,12 +60,16 @@
     [button2 setBackgroundColor:[UIColor darkGrayColor]];
     [button2 setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
 
-    [self setConstraintsForViews:NSDictionaryOfVariableBindings(button1, button2) visualFormats:@[@"|-[button1(button2)]-[button2]-|", @"V:[button1(height)]-|"] metrics:@{@"height":@50.0} options:NSLayoutFormatAlignAllTop | NSLayoutFormatAlignAllBottom];
+    [self setConstraintsForViews:NSDictionaryOfVariableBindings(button1, button2)
+                   visualFormats:@[@"|-[button1(button2)]-[button2]-|", @"V:[button1(height)]-|"]
+                         metrics:@{@"height":@50.0}
+                         options:NSLayoutFormatAlignAllTop | NSLayoutFormatAlignAllBottom
+     ];
 
 }
 ```
 
-###More Advanced Example of using [_setConstraintsForViews_](../Libraries/ConstraintsViewController/)
+###More Advanced Example of using [_setConstraintsForViews_](../Libraries/ContraintsViewController/)
 
 **Layout with header, main content area, and footer.**
 
@@ -95,9 +99,21 @@
     [bottomButton2 setBackgroundColor:[UIColor darkGrayColor]];
     [bottomButton2 setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
 
-    [self setConstraintsForViews:NSDictionaryOfVariableBindings(headerButton, contentButton, bottomButton1, bottomButton2) visualFormats:@[@"|-(innerSpacing)-[headerButton]-(innerSpacing)-|", @"|-(innerSpacing)-[contentButton]-(innerSpacing)-|", @"|-(innerSpacing)-[bottomButton1(bottomButton2)]-[bottomButton2]-(innerSpacing)-|"] metrics:@{@"headerHeight":@75.0, @"bottomButtonHeight":@40.0, @"innerSpacing":@10.0} options:NSLayoutFormatAlignAllTop | NSLayoutFormatAlignAllBottom];
+    [self setConstraintsForViews:NSDictionaryOfVariableBindings(headerButton, contentButton, bottomButton1, bottomButton2)
+                   visualFormats:@[
+                                   @"|-(innerSpacing)-[headerButton]-(innerSpacing)-|",
+                                   @"|-(innerSpacing)-[contentButton]-(innerSpacing)-|",
+                                   @"|-(innerSpacing)-[bottomButton1(bottomButton2)]-[bottomButton2]-(innerSpacing)-|"
+                                   ]
+                         metrics:@{@"headerHeight":@75.0, @"bottomButtonHeight":@40.0, @"innerSpacing":@10.0}
+                         options:NSLayoutFormatAlignAllTop | NSLayoutFormatAlignAllBottom
+     ];
 
-    [self setConstraintsForViews:NSDictionaryOfVariableBindings(headerButton, contentButton, bottomButton1, bottomButton2) visualFormats:@[@"V:|-[headerButton(headerHeight)]-[contentButton]-[bottomButton1(bottomButtonHeight)]-(innerSpacing)-|"] metrics:@{@"headerHeight":@75.0, @"bottomButtonHeight":@40.0, @"innerSpacing":@10.0} options:0];
+    [self setConstraintsForViews:NSDictionaryOfVariableBindings(headerButton, contentButton, bottomButton1, bottomButton2)
+                   visualFormats:@[@"V:|-[headerButton(headerHeight)]-[contentButton]-[bottomButton1(bottomButtonHeight)]-(innerSpacing)-|"]
+                         metrics:@{@"headerHeight":@75.0, @"bottomButtonHeight":@40.0, @"innerSpacing":@10.0}
+                         options:0
+     ];
 
 }
 ```
