@@ -7,7 +7,7 @@
 {
 
     NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
-    [defaults registerDefaults:@{@"apiKey":nil}];
+    [defaults registerDefaults:@{@"name_preference":@""}];
 
     return YES;
 
@@ -23,7 +23,7 @@
     [super viewDidLoad];
 
     NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
-    NSLog(@"APIKEY: %@", [defaults valueForKey:@"apiKey"]);
+    NSLog(@"Name: %@", [defaults valueForKey:@"name_preference"]);
 
 }
 ```
