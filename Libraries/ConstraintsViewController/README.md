@@ -6,7 +6,7 @@
 
 First drag the **ConstraintsViewController** folder into your project. Be sure to check off **Copy items into destination group's folder (if needed)** in the dialog that pops up.
 
-![screenshot](http://f.cl.ly/items/243F3M193I162o3e1Q3u/Screen%20Shot%202013-10-01%20at%2011.53.23%20AM.png)
+![xcode-screenshot](http://f.cl.ly/items/0W2f1c3Y343k2B3A1i14/ConstraintsViewController-xcode-screenshot.png)
 
 Import into the header file of the view controller you will be working in, then change object `UIViewController` to `ConstraintsViewController`.
 
@@ -127,3 +127,8 @@ Now you can use AutoLayout like this ...
 
 }
 ```
+
+##Screnshots
+
+![iphone-screenshot](http://f.cl.ly/items/1Q0k372B1Z20340l2O14/ConstraintsViewController-iphone-portrait-screenshot.png)
+![iphone-screenshot](http://f.cl.ly/items/0U2A1X0B1N1A3f02223V/ConstraintsViewController-iphone-landscape-screenshot.png)
