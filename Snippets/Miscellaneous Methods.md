@@ -63,11 +63,19 @@ UIAlertView *message = [[UIAlertView alloc] initWithTitle:@"Alert"
 - (void)buttonPressed:(UIButton *)sender;
 {
 
-    timer = [NSTimer scheduledTimerWithTimeInterval:0
-                                             target:self
-                                           selector:@selector(timerFunction:)
-                                           userInfo:nil
-                                            repeats:YES];
+    if (![timer isValid]) {
+
+        timer = [NSTimer scheduledTimerWithTimeInterval:0
+                                                 target:self
+                                               selector:@selector(timerFunction:)
+                                               userInfo:nil
+                                                repeats:YES];
+
+    } else {
+
+        [timer invalidate];
+
+    }
 
 }
 
@@ -75,8 +83,6 @@ UIAlertView *message = [[UIAlertView alloc] initWithTitle:@"Alert"
 {
 
     NSLog(@"Hello!");
-
-    // [self.timer invalidate];
 
 }
 
