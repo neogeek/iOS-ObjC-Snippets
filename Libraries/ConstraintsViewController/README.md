@@ -128,7 +128,7 @@ Now you can use AutoLayout like this ...
 }
 ```
 
-##Screnshots
+##Screenshots
 
 ![iphone-screenshot](http://f.cl.ly/items/1Q0k372B1Z20340l2O14/ConstraintsViewController-iphone-portrait-screenshot.png)
 ![iphone-screenshot](http://f.cl.ly/items/0U2A1X0B1N1A3f02223V/ConstraintsViewController-iphone-landscape-screenshot.png)
