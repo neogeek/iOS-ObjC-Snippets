@@ -32,8 +32,8 @@
 
     locationManager = [[CLLocationManager alloc] init];
     [locationManager setDelegate:self];
-    [locationManager startMonitoringSignificantLocationChanges]; // Low frequency updates based on movement)
-    // [locationManager startUpdatingLocation]; // High frequency updates (based on movement)
+    [locationManager startMonitoringSignificantLocationChanges]; // Low frequency updates
+    // [locationManager startUpdatingLocation]; // High frequency updates
 
 }
 
