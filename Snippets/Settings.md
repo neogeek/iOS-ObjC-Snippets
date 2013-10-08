@@ -20,8 +20,6 @@
 - (void)viewDidLoad
 {
 
-    [super viewDidLoad];
-
     NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
     NSLog(@"Name: %@", [defaults valueForKey:@"name_preference"]);
 
