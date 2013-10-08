@@ -39,15 +39,13 @@ UIAlertView *message = [[UIAlertView alloc] initWithTitle:@"Alert"
 ```objc
 @interface ViewController ()
 {
-
     NSTimer *timer;
-
 }
 @end
 
 @implementation ViewController
 
-- (void)viewDidLoad;
+- (void)viewDidLoad
 {
 
     UIButton *button = [UIButton buttonWithType:UIButtonTypeSystem];
@@ -92,7 +90,7 @@ UIAlertView *message = [[UIAlertView alloc] initWithTitle:@"Alert"
 ###Animations
 
 ```objc
-- (void)viewDidLoad;
+- (void)viewDidLoad
 {
 
     [self.view setBackgroundColor:[UIColor greenColor]];
@@ -119,7 +117,7 @@ UIAlertView *message = [[UIAlertView alloc] initWithTitle:@"Alert"
 ###Remove SubViews From View
 
 ```objc
-- (void)viewDidLoad;
+- (void)viewDidLoad
 {
 
     int length = 10;
@@ -145,7 +143,7 @@ UIAlertView *message = [[UIAlertView alloc] initWithTitle:@"Alert"
 ###UITapGestureRecognizer
 
 ```objc
-- (void)viewDidLoad;
+- (void)viewDidLoad
 {
 
     UIImageView *imageView = [[UIImageView alloc] initWithFrame:CGRectMake(20, 40, 100, 100)];

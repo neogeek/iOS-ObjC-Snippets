@@ -21,18 +21,16 @@
 
 @interface ViewController ()
 {
-
     SLComposeViewController *composeViewController;
 
     UIButton *twitterButton;
     UIButton *facebookButton;
-
 }
 @end
 
 @implementation ViewController
 
-- (void)viewDidLoad;
+- (void)viewDidLoad
 {
 
     UIView *superview = self.view;

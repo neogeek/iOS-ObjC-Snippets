@@ -1,9 +1,14 @@
 #UITableViewController
 
-_AppDelagate.m_
-
 ```objc
-- (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions;
+// AppDelagate.m
+
+#import "AppDelegate.h"
+#import "TableViewController.h"
+
+@implementation AppDelegate
+
+- (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
 
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
@@ -20,22 +25,32 @@ _AppDelagate.m_
     return YES;
 
 }
+
+@end
 ```
 
-_TableViewController.m_ (Custom)
-
 ```objc
-- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView;
+// TableViewController.m
+
+#import "TableViewController.h"
+
+@interface TableViewController ()
+
+@end
+
+@implementation TableViewController
+
+- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
 {
     return 1;
 }
 
-- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section;
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
     return 25;
 }
 
-- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath;
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
 
     static NSString *CellIdentifier = @"Cell";
@@ -51,7 +66,7 @@ _TableViewController.m_ (Custom)
 
 }
 
-- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath;
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
 
     UIViewController *viewController = [[UIViewController alloc] init];
@@ -61,17 +76,19 @@ _TableViewController.m_ (Custom)
 
 }
 
-- (BOOL)scrollViewShouldScrollToTop:(UIScrollView *)scrollView;
+- (BOOL)scrollViewShouldScrollToTop:(UIScrollView *)scrollView
 {
     return YES; // Set to NO to disable scroll to top.
 }
+
+@end
 ```
 
-##Adding Pull to Refresh
-
-_TableViewController.m_ (Custom)
+##Adding Pull to Refresh (Add to above code)
 
 ```objc
+// TableViewController.m
+
 - (void)viewDidLoad
 {
 

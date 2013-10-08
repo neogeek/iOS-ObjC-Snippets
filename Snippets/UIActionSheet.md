@@ -1,19 +1,19 @@
 #UIActionSheet
 
-_ViewController.h_
-
 ```objc
+// ViewController.h
+
 @interface ViewController : UIViewController <UIActionSheetDelegate>
 
 @end
 ```
 
-_ViewController.m_
-
 ```objc
+// ViewController.m
+
 @implementation ViewController
 
-- (void)viewDidLoad;
+- (void)viewDidLoad
 {
 
     UIButton *button = [UIButton buttonWithType:UIButtonTypeSystem];
@@ -35,7 +35,7 @@ _ViewController.m_
 
 }
 
-- (void)actionSheet:(UIActionSheet *)actionSheet clickedButtonAtIndex:(NSInteger)buttonIndex;
+- (void)actionSheet:(UIActionSheet *)actionSheet clickedButtonAtIndex:(NSInteger)buttonIndex
 {
 
     typedef NS_ENUM(NSInteger, actionButton) {

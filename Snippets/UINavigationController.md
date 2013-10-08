@@ -1,9 +1,9 @@
 #UINavigationController
 
-_AppDelagate.m_
-
 ```objc
-- (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOption;
+// AppDelagate.m
+
+- (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOption
 {
 
     UIViewController *feedViewController = [[UIViewController alloc] init];

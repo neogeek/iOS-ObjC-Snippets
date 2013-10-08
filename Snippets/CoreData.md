@@ -28,9 +28,7 @@
 
 @interface ViewController ()
 {
-
     NSManagedObjectContext *context;
-
 }
 @end
 

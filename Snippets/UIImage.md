@@ -1,9 +1,9 @@
 #UIImage
 
-_ViewController.m_
-
 ```objc
-- (void)viewDidLoad;
+// ViewController.m
+
+- (void)viewDidLoad
 {
 
     UIImageView *imageView = [[UIImageView alloc] initWithFrame:CGRectMake(20, 40, 100, 100)];
@@ -15,6 +15,8 @@ _ViewController.m_
 ```
 
 ```objc
+// ViewController.m
+
 - (void)viewDidLoad
 {
 

@@ -4,6 +4,7 @@
 
 ```objc
 #define WEATHER_API_URL @"http://warm-wildwood-5296.herokuapp.com/"
+NSLog(@"%@", WEATHER_API_URL);
 ```
 
 ###String
@@ -66,14 +67,12 @@ NSLog(@"%@", [user allValues]);
 
 ###URL
 
-_ViewController.m_
-
 ```objc
+// ViewController.m
+
 @interface ViewController ()
 {
-
     NSMutableData *responseData;
-
 }
 @end
 
@@ -91,21 +90,21 @@ _ViewController.m_
 
 }
 
-- (void)connection:(NSURLConnection *)connection didReceiveResponse:(NSURLResponse *)response;
+- (void)connection:(NSURLConnection *)connection didReceiveResponse:(NSURLResponse *)response
 {
 
     responseData = [[NSMutableData alloc] init];
 
 }
 
-- (void)connection:(NSURLConnection *)connection didReceiveData:(NSData *)data;
+- (void)connection:(NSURLConnection *)connection didReceiveData:(NSData *)data
 {
 
     [responseData appendData:data];
 
 }
 
-- (void)connectionDidFinishLoading:(NSURLConnection *)connection;
+- (void)connectionDidFinishLoading:(NSURLConnection *)connection
 {
 
     NSError *error;

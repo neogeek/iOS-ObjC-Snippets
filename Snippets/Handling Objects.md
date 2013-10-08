@@ -7,16 +7,14 @@
 ```objc
 @interface ViewController ()
 {
-
     UIButton *button1;
     UIButton *button2;
-
 }
 @end
 
 @implementation ViewController
 
-- (void)viewDidLoad;
+- (void)viewDidLoad
 {
 
     button1 = [UIButton buttonWithType:UIButtonTypeSystem];

@@ -1,9 +1,9 @@
 #UIScrollView
 
-_ViewController.m_
-
 ```objc
-- (void)viewDidLoad;
+// ViewController.m
+
+- (void)viewDidLoad
 {
 
     UIScrollView *scrollView = [[UIScrollView alloc] initWithFrame:self.view.bounds];
@@ -32,9 +32,9 @@ _ViewController.m_
 
 ###UIScrollView w/ Pages and Pagination
 
-_ViewController.h_
-
 ```objc
+// ViewController.h
+
 @interface ViewController : UIViewController <UIScrollViewDelegate>
 
 @property (strong, nonatomic) UIScrollView *scrollView;
@@ -43,10 +43,10 @@ _ViewController.h_
 @end
 ```
 
-_ViewController.m_
-
 ```objc
-- (void)viewDidLoad;
+// ViewController.m
+
+- (void)viewDidLoad
 {
 
     self.scrollView = [[UIScrollView alloc] initWithFrame:self.view.bounds];
@@ -81,7 +81,7 @@ _ViewController.m_
 
 }
 
-- (void)updateScollViewPosition:(UIPageControl*)control;
+- (void)updateScollViewPosition:(UIPageControl*)control
 {
 
     CGSize viewSize = self.scrollView.frame.size;
@@ -90,7 +90,7 @@ _ViewController.m_
 
 }
 
-- (void)scrollViewDidEndDecelerating:(UIScrollView *)scrollView;
+- (void)scrollViewDidEndDecelerating:(UIScrollView *)scrollView
 {
 
     float width = [[self.scrollView subviews][0] frame].size.width;

@@ -1,9 +1,9 @@
 #UIButton
 
-_ViewController.m_
-
 ```objc
-- (void)viewDidLoad;
+// ViewController.m
+
+- (void)viewDidLoad
 {
 
     UIButton *button = [UIButton buttonWithType:UIButtonTypeSystem];
@@ -28,7 +28,7 @@ _ViewController.m_
 
 }
 
-- (void)alertView:(UIAlertView *)actionSheet clickedButtonAtIndex:(NSInteger)buttonIndex;
+- (void)alertView:(UIAlertView *)actionSheet clickedButtonAtIndex:(NSInteger)buttonIndex
 {
 
     NSLog(@"%ld", (long)buttonIndex);

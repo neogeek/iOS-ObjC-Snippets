@@ -2,9 +2,9 @@
 
 ###UIViewController as a Modal View
 
-_ViewController.m_
-
 ```objc
+// ViewController.m
+
 - (void)viewDidLoad
 {
 
@@ -48,9 +48,9 @@ _ViewController.m_
 
 ###UIViewController as a Modal View w/ Custom Animation
 
-_ViewController.m_
-
 ```objc
+// ViewController.m
+
 @interface ViewController ()
 {
     UIViewController *modalViewController;
