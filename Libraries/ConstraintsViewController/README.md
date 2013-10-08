@@ -52,14 +52,12 @@ Now you can use AutoLayout like this ...
                                    @"|-(innerSpacing)-[bottomButton1(bottomButton2)]-[bottomButton2]-(innerSpacing)-|"
                                    ]
                          metrics:@{@"headerHeight":@75.0, @"bottomButtonHeight":@40.0, @"innerSpacing":@10.0}
-                         options:NSLayoutFormatAlignAllTop | NSLayoutFormatAlignAllBottom
-     ];
+                         options:NSLayoutFormatAlignAllTop | NSLayoutFormatAlignAllBottom];
 
     [self setConstraintsForViews:NSDictionaryOfVariableBindings(headerButton, contentButton, bottomButton1, bottomButton2)
                    visualFormats:@[@"V:|-[headerButton(headerHeight)]-[contentButton]-[bottomButton1(bottomButtonHeight)]-(innerSpacing)-|"]
                          metrics:@{@"headerHeight":@75.0, @"bottomButtonHeight":@40.0, @"innerSpacing":@10.0}
-                         options:0
-     ];
+                         options:0];
 
 }
 ```

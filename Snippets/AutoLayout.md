@@ -74,8 +74,7 @@
     [self setConstraintsForViews:NSDictionaryOfVariableBindings(button1, button2)
                    visualFormats:@[@"|-[button1(button2)]-[button2]-|", @"V:[button1(height)]-|"]
                          metrics:@{@"height":@50.0}
-                         options:NSLayoutFormatAlignAllTop | NSLayoutFormatAlignAllBottom
-     ];
+                         options:NSLayoutFormatAlignAllTop | NSLayoutFormatAlignAllBottom];
 
 }
 ```
@@ -128,14 +127,12 @@
                                    @"|-(innerSpacing)-[bottomButton1(bottomButton2)]-[bottomButton2]-(innerSpacing)-|"
                                    ]
                          metrics:@{@"headerHeight":@75.0, @"bottomButtonHeight":@40.0, @"innerSpacing":@10.0}
-                         options:NSLayoutFormatAlignAllTop | NSLayoutFormatAlignAllBottom
-     ];
+                         options:NSLayoutFormatAlignAllTop | NSLayoutFormatAlignAllBottom];
 
     [self setConstraintsForViews:NSDictionaryOfVariableBindings(headerButton, contentButton, bottomButton1, bottomButton2)
                    visualFormats:@[@"V:|-[headerButton(headerHeight)]-[contentButton]-[bottomButton1(bottomButtonHeight)]-(innerSpacing)-|"]
                          metrics:@{@"headerHeight":@75.0, @"bottomButtonHeight":@40.0, @"innerSpacing":@10.0}
-                         options:0
-     ];
+                         options:0];
 
 }
 ```
