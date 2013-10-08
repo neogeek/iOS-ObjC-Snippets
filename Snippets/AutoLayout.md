@@ -40,9 +40,20 @@
 }
 ```
 
-###Using Custom Function [_setConstraintsForViews_](../Libraries/ContraintsViewController/)
+###Using Custom Function [_setConstraintsForViews_](../Libraries/ConstraintsViewController/)
 
 **Two Buttons Anchored to the Bottom**
+
+```objc
+// ViewController.h
+
+#import <UIKit/UIKit.h>
+#import "ConstraintsViewController.h"
+
+@interface ViewController : ConstraintsViewController
+
+@end
+```
 
 ```objc
 // ViewController.m
@@ -69,9 +80,20 @@
 }
 ```
 
-###More Advanced Example of using [_setConstraintsForViews_](../Libraries/ContraintsViewController/)
+###More Advanced Example of using [_setConstraintsForViews_](../Libraries/ConstraintsViewController/)
 
 **Layout with header, main content area, and footer.**
+
+```objc
+// ViewController.h
+
+#import <UIKit/UIKit.h>
+#import "ConstraintsViewController.h"
+
+@interface ViewController : ConstraintsViewController
+
+@end
+```
 
 ```objc
 // ViewController.m
