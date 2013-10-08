@@ -15,6 +15,7 @@ This is a collection of snippets that I have been referencing quite a bit while 
 - [Handling Data](Snippets/Handling Data.md)
 - [Handling Objects](Snippets/Handling Objects.md)
 - [Logic](Snippets/Logic.md)
+- [MapKit.framework](Snippets/MapKit.framework.md)
 - [Miscellaneous Methods](Snippets/Miscellaneous Methods.md)
 - [NSCoding](Snippets/NSCoding.md)
 - [Settings](Snippets/Settings.md)
