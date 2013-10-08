@@ -1,8 +1,21 @@
 #Social.framework
 
-###Twitter/Facebook Post Buttons
+###Twitter/Facebook Post Buttons [_setConstraintsForViews_](../Libraries/ConstraintsViewController/)
 
 ```objc
+// ViewController.h
+
+#import <UIKit/UIKit.h>
+#import "ConstraintsViewController.h"
+
+@interface ViewController : ConstraintsViewController
+
+@end
+```
+
+```objc
+// ViewController.m
+
 #import "ViewController.h"
 #import <Social/Social.h>
 
@@ -38,11 +51,20 @@
     [facebookButton.titleLabel setAdjustsFontSizeToFitWidth:YES];
     [facebookButton addTarget:self action:@selector(buttonPressed:) forControlEvents:UIControlEventTouchUpInside];
 
-    [self setConstraintsForViews:NSDictionaryOfVariableBindings(superview, twitterButton, facebookButton) visualFormats:@[@"|-[twitterButton(facebookButton)]-[facebookButton]-|"] metrics:nil options:NSLayoutFormatAlignAllTop | NSLayoutFormatAlignAllBottom];
+    [self setConstraintsForViews:NSDictionaryOfVariableBindings(superview, twitterButton, facebookButton)
+                   visualFormats:@[@"|-[twitterButton(facebookButton)]-[facebookButton]-|"]
+                         metrics:nil
+                         options:NSLayoutFormatAlignAllTop | NSLayoutFormatAlignAllBottom];
 
-    [self setConstraintsForViews:NSDictionaryOfVariableBindings(superview, twitterButton, facebookButton) visualFormats:@[@"[superview]-(<=1)-[twitterButton]"] metrics:nil options:NSLayoutFormatAlignAllCenterY];
+    [self setConstraintsForViews:NSDictionaryOfVariableBindings(superview, twitterButton, facebookButton)
+                   visualFormats:@[@"[superview]-(<=1)-[twitterButton]"]
+                         metrics:nil
+                         options:NSLayoutFormatAlignAllCenterY];
 
-    [self setConstraintsForViews:NSDictionaryOfVariableBindings(superview, twitterButton, facebookButton) visualFormats:@[@"V:[twitterButton(buttonHeight)]"] metrics:@{@"buttonHeight":@50.0} options:0];
+    [self setConstraintsForViews:NSDictionaryOfVariableBindings(superview, twitterButton, facebookButton)
+                   visualFormats:@[@"V:[twitterButton(buttonHeight)]"]
+                         metrics:@{@"buttonHeight":@50.0}
+                         options:0];
 
 }
 
@@ -70,48 +92,6 @@
             [self presentViewController:composeViewController animated:YES completion:nil];
 
         }
-
-    }
-
-}
-
-/**
- * Streamlines the creation of Auto Layout Constraints using VFL (Visual Format Language)
- *
- *  [self setConstraintsForViews:NSDictionaryOfVariableBindings(button) visualFormats:@[@"|-[button]-|", @"V:[button(height)]-|"] metrics:@{@"height":@50.0} options:0];
- *
- * @param {NSDictionary} setConstraintsForViews A NSDictionaryOfVariableBindings object containing the views to be positioned through autolayout.
- * @param {NSArray} visualFormats An NSArray of visual format strings.
- * @param {NSDictionary} metrics An NSDictionary object containing visual format variables.
- * @param {NSLayoutFormatOptions} options An NSLayoutFormatOptions object containing one (or two) alignment options.
- * @return {void}
- * @api public
- */
-
-- (void)setConstraintsForViews:(NSDictionary *)views visualFormats:(NSArray *)visualFormats metrics:(NSDictionary *)metrics options:(NSLayoutFormatOptions)options;
-{
-
-    for (UIView *view in [views allValues]) {
-
-        if (![view isDescendantOfView:self.view] && ![view isEqual:self.view]) {
-
-            [self.view addSubview:view];
-
-        }
-
-        [view setTranslatesAutoresizingMaskIntoConstraints:NO];
-
-    }
-
-    NSMutableDictionary *allMetrics = [[NSMutableDictionary alloc] initWithDictionary:metrics];
-
-    [allMetrics setValue:@(UILayoutPriorityDefaultHigh) forKey:@"_priorityHigh"];
-    [allMetrics setValue:@(UILayoutPriorityDefaultLow) forKey:@"_priorityLow"];
-    [allMetrics setValue:@(UILayoutPriorityRequired) forKey:@"_priorityRequired"];
-
-    for (NSString *format in visualFormats) {
-
-        [self.view addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:format options:options metrics:allMetrics views:views]];
 
     }
 
