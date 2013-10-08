@@ -22,6 +22,7 @@ This is a collection of snippets that I have been referencing quite a bit while 
 - [Social.framework](Snippets/Social.framework.md)
 - [UIActionSheet](Snippets/UIActionSheet.md)
 - [UIButton](Snippets/UIButton.md)
+- [UICollectionView](Snippets/UICollectionView.md)
 - [UIImage](Snippets/UIImage.md)
 - [UILabel](Snippets/UILabel.md)
 - [UINavigationController](Snippets/UINavigationController.md)
