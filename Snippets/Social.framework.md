@@ -22,8 +22,6 @@
 - (void)viewDidLoad
 {
 
-    NSLog(@"%f", self.view.frame.size.width);
-
     twitterButton = [UIButton buttonWithType:UIButtonTypeSystem];
     [twitterButton setFrame:CGRectMake(60, 50, 200, 44)];
     [twitterButton setBackgroundColor:[UIColor lightGrayColor]];
