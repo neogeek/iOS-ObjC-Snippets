@@ -163,6 +163,30 @@ UIAlertView *message = [[UIAlertView alloc] initWithTitle:@"Alert"
 }
 ```
 
+###Opening Link in Safari
+
+```objc
+- (void)viewDidLoad
+{
+
+    UIButton *button = [UIButton buttonWithType:UIButtonTypeSystem];
+    [button setFrame:CGRectMake(60, 50, 200, 44)];
+    [button setBackgroundColor:[UIColor lightGrayColor]];
+    [button setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
+    [button setTitle:@"Open Google.com" forState:UIControlStateNormal];
+    [button addTarget:self action:@selector(buttonPressed:) forControlEvents:UIControlEventTouchUpInside];
+    [self.view addSubview:button];
+
+}
+
+- (void)buttonPressed:(UIButton *)sender;
+{
+
+    [[UIApplication sharedApplication] openURL:[NSURL URLWithString:@"http://www.google.com/"]];
+
+}
+```
+
 ###Throw Exception
 
 ```objc

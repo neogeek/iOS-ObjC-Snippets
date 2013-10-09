@@ -33,6 +33,7 @@ This is a collection of snippets that I have been referencing quite a bit while 
 - [UITextField](Snippets/UITextField.md)
 - [UITextView](Snippets/UITextView.md)
 - [UIViewController](Snippets/UIViewController.md)
+- [UIWebView](Snippets/UIWebView.md)
 - [Variables](Snippets/Variables.md)
 - [Xcode Editor](Snippets/Xcode Editor.md)
 
