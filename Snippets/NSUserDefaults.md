@@ -3,21 +3,52 @@
 ```objc
 // ViewController.m
 
+@interface ViewController ()
+{
+    UITextView *textView;
+}
+@end
+
+@implementation ViewController
+
 - (void)viewDidLoad
 {
 
-    NSUserDefaults *userDefaults = [NSUserDefaults standardUserDefaults];
+    textView = [[UITextView alloc] initWithFrame:self.view.frame];
+    [textView setFont:[UIFont fontWithName:@"Helvetica" size:16]];
+    [textView setEditable:NO];
+    [self.view addSubview:textView];
 
     NSArray *hats = @[@"cowboy hat", @"conductor cap", @"baseball hat", @"beanie", @"beret", @"fez"];
 
+    [self logHatsWithText:@"After load:"];
+
     // Storing hats in user defaults
-    [userDefaults setObject:[NSKeyedArchiver archivedDataWithRootObject:hats] forKey:@"hats"];
+    [[NSUserDefaults standardUserDefaults] setObject:hats forKey:@"hats"];
+
+    [self logHatsWithText:@"After save:"];
 
     // Retrieving hats from user defaults
-    NSArray *storedHats = [NSKeyedUnarchiver unarchiveObjectWithData:[userDefaults objectForKey:@"hats"]];
+    NSArray *storedHats = [[NSUserDefaults standardUserDefaults] valueForKey:@"hats"];
 
-    NSLog(@"%@", hats);
     NSLog(@"%@", storedHats);
 
+    // Removing hats from user defaults
+    [[NSUserDefaults standardUserDefaults] removeObjectForKey:@"hats"];
+
+    [self logHatsWithText:@"After delete:"];
+
 }
+
+- (void)logHatsWithText:(NSString *)text;
+{
+
+    NSArray *storedHats = [[NSUserDefaults standardUserDefaults] valueForKey:@"hats"];
+
+    [textView setText:[NSString stringWithFormat:@"%@\n%@\n%@", [textView text], text, storedHats]];
+
+}
+
+@end
+
 ```
