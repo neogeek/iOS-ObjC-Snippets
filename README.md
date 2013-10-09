@@ -24,6 +24,7 @@ This is a collection of snippets that I have been referencing quite a bit while 
 - [UIButton](Snippets/UIButton.md)
 - [UICollectionView](Snippets/UICollectionView.md)
 - [UIImage](Snippets/UIImage.md)
+- [UIImagePickerController](Snippets/UIImagePickerController.md)
 - [UILabel](Snippets/UILabel.md)
 - [UINavigationController](Snippets/UINavigationController.md)
 - [UIScrollView](Snippets/UIScrollView.md)
