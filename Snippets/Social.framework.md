@@ -1,17 +1,6 @@
 #Social.framework
 
-###Twitter/Facebook Post Buttons [_setConstraintsForViews_](../Libraries/ConstraintsViewController/)
-
-```objc
-// ViewController.h
-
-#import <UIKit/UIKit.h>
-#import "ConstraintsViewController.h"
-
-@interface ViewController : ConstraintsViewController
-
-@end
-```
+###Twitter/Facebook Post Buttons
 
 ```objc
 // ViewController.m
@@ -33,36 +22,25 @@
 - (void)viewDidLoad
 {
 
-    UIView *superview = self.view;
+    NSLog(@"%f", self.view.frame.size.width);
 
     twitterButton = [UIButton buttonWithType:UIButtonTypeSystem];
+    [twitterButton setFrame:CGRectMake(60, 50, 200, 44)];
     [twitterButton setBackgroundColor:[UIColor lightGrayColor]];
     [twitterButton setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
     [twitterButton setTitle:@"Post With Twitter" forState:UIControlStateNormal];
     [twitterButton.titleLabel setAdjustsFontSizeToFitWidth:YES];
     [twitterButton addTarget:self action:@selector(buttonPressed:) forControlEvents:UIControlEventTouchUpInside];
+    [self.view addSubview:twitterButton];
 
     facebookButton = [UIButton buttonWithType:UIButtonTypeSystem];
+    [facebookButton setFrame:CGRectMake(60, 100, 200, 44)];
     [facebookButton setBackgroundColor:[UIColor lightGrayColor]];
     [facebookButton setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
     [facebookButton setTitle:@"Post With Facebook" forState:UIControlStateNormal];
     [facebookButton.titleLabel setAdjustsFontSizeToFitWidth:YES];
     [facebookButton addTarget:self action:@selector(buttonPressed:) forControlEvents:UIControlEventTouchUpInside];
-
-    [self setConstraintsForViews:NSDictionaryOfVariableBindings(superview, twitterButton, facebookButton)
-                   visualFormats:@[@"|-[twitterButton(facebookButton)]-[facebookButton]-|"]
-                         metrics:nil
-                         options:NSLayoutFormatAlignAllTop | NSLayoutFormatAlignAllBottom];
-
-    [self setConstraintsForViews:NSDictionaryOfVariableBindings(superview, twitterButton, facebookButton)
-                   visualFormats:@[@"[superview]-(<=1)-[twitterButton]"]
-                         metrics:nil
-                         options:NSLayoutFormatAlignAllCenterY];
-
-    [self setConstraintsForViews:NSDictionaryOfVariableBindings(superview, twitterButton, facebookButton)
-                   visualFormats:@[@"V:[twitterButton(buttonHeight)]"]
-                         metrics:@{@"buttonHeight":@50.0}
-                         options:0];
+    [self.view addSubview:facebookButton];
 
 }
 
