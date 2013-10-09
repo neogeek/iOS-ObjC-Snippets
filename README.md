@@ -66,3 +66,4 @@ This is a collection of snippets that I have been referencing quite a bit while 
 
 - <https://github.com/AFNetworking/AFNetworking/>
 - <https://github.com/RestKit/RestKit/>
+- <https://github.com/CEWendel/SWTableViewCell>
