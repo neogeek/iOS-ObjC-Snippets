@@ -13,7 +13,7 @@
 
 @interface ViewController ()
 {
-    UITextField *textField;
+    UITextField *textfield;
 }
 @end
 
@@ -22,10 +22,10 @@
 - (void)viewDidLoad
 {
 
-    textField = [[UITextField alloc] initWithFrame:CGRectMake(20, 40, 280, 50)];
-    [textField setBorderStyle:UITextBorderStyleRoundedRect];
-    [textField setDelegate:self];
-    [self.view addSubview:textField];
+    textfield = [[UITextField alloc] initWithFrame:CGRectMake(20, 40, 280, 50)];
+    [textfield setBorderStyle:UITextBorderStyleRoundedRect];
+    [textfield setDelegate:self];
+    [self.view addSubview:textfield];
 
     UITapGestureRecognizer *tapView = [[UITapGestureRecognizer alloc]
                                    initWithTarget:self
@@ -35,7 +35,7 @@
 
 }
 
-- (BOOL)textFieldShouldReturn:(UITextField *)textField
+- (BOOL)textFieldShouldReturn:(UITextField *)textfield
 {
     [self dismissKeyboard];
     return YES;
@@ -43,9 +43,8 @@
 
 -(void)dismissKeyboard;
 {
-    [textField resignFirstResponder];
+    [textfield resignFirstResponder];
 }
 
 @end
-
 ```
