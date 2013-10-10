@@ -25,6 +25,7 @@
 
     // Storing hats in user defaults
     [[NSUserDefaults standardUserDefaults] setObject:hats forKey:@"hats"];
+    [[NSUserDefaults standardUserDefaults] synchronize];
 
     [self logHatsWithText:@"After save:"];
 
