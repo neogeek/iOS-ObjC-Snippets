@@ -65,7 +65,7 @@
 
 }
 
--(void)closeWebView;
+- (void)closeWebView;
 {
 
     [viewController dismissViewControllerAnimated:YES completion:nil];

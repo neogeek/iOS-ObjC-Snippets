@@ -41,7 +41,7 @@
     return YES;
 }
 
--(void)dismissKeyboard;
+- (void)dismissKeyboard;
 {
     [textfield resignFirstResponder];
 }
