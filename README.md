@@ -68,6 +68,7 @@ This is a collection of snippets that I have been referencing quite a bit while 
 ###Frameworks
 
 - <https://github.com/AFNetworking/AFNetworking/>
+- <https://github.com/path/FastImageCache>
 - <https://github.com/RestKit/RestKit/>
 - <https://github.com/CEWendel/SWTableViewCell>
 - <https://github.com/mehsome/MCPanelViewController>
