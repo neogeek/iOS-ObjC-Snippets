@@ -74,3 +74,4 @@ This is a collection of snippets that I have been referencing quite a bit while 
 - <https://github.com/mehsome/MCPanelViewController>
 - <https://github.com/IFTTT/JazzHands>
 - <https://github.com/arielelkin/PocketSVG>
+- <https://github.com/cloudkite/Masonry>
